@@ -15,7 +15,7 @@ body {
 .container {
     text-align: center;
     position: relative;
-    top: -50px; /* Подняли текст и кнопки вверх */
+    top: -50px;
 }
 
 h1 {
@@ -41,7 +41,7 @@ h1 {
     font-size: 18px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 250px; /* Фиксированный размер кнопок */
+    width: 250px;
     text-align: center;
 }
 
@@ -58,4 +58,20 @@ h1 {
 /* Скрытые элементы */
 .hidden {
     display: none;
+}
+
+/* Список кнопок */
+.button-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.button-list li {
+    margin: 10px 0;
+}
+
+.sub-button {
+    width: 250px;
+    padding: 15px;
 }
