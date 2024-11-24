@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фарм и Просто</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="content" class="hidden">
+        <div id="main-screen" class="container">
+            <h1>Выберите раздел</h1>
+            <div class="button-container">
+                <button class="main-button" onclick="openSection('farm')">Фарм</button>
+                <button class="main-button" onclick="openSection('just')">Просто</button>
+            </div>
+        </div>
+
+        <div id="farm-screen" class="container hidden">
+            <h1>Фарм</h1>
+            <div class="button-container">
+                <button class="sub-button">Tiny Verse 🌌</button>
+                <button class="sub-button">Major ⭐</button>
+            </div>
+            <button class="back-button" onclick="goBack()">Назад</button>
+        </div>
+
+        <div id="just-screen" class="container hidden">
+            <h1>Просто</h1>
+            <div class="button-container">
+                <button class="sub-button">Tiny Verse 🌌</button>
+                <button class="sub-button">Major ⭐</button>
+            </div>
+            <button class="back-button" onclick="goBack()">Назад</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

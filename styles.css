@@ -1,0 +1,58 @@
+/* Общий стиль */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #e0e0e0;
+}
+
+/* Кнопки */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.main-button, .sub-button, .back-button {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    padding: 15px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main-button:hover, .sub-button:hover, .back-button:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.back-button {
+    margin-top: 30px;
+}
+
+/* Скрытые элементы */
+.hidden {
+    display: none;
+}
+
