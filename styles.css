@@ -65,6 +65,10 @@ h1 {
     list-style: none;
     padding: 0;
     margin: 0;
+    max-height: 400px; /* Ограничиваем высоту контейнера */
+    overflow-y: auto; /* Добавляем вертикальную прокрутку */
+    margin-top: 20px;
+    padding-right: 10px; /* Чтобы прокрутка не перекрывала кнопки */
 }
 
 .button-list li {
