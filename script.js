@@ -14,8 +14,8 @@ window.onload = function () {
 };
 
 function openSection(sectionId) {
-    // Скрываем главный экран и другие разделы
-    document.getElementById("main-screen").classList.add("hidden");
+    // Скрываем все разделы
+    document.getElementById("content").classList.add("hidden");
     document.getElementById("farm-screen").classList.add("hidden");
     document.getElementById("just-screen").classList.add("hidden");
 
@@ -24,7 +24,7 @@ function openSection(sectionId) {
 }
 
 function openSubsection(subsectionId) {
-    // Скрываем все подразделы (Tiny Verse, Major) и другие кнопки
+    // Скрываем все подразделы (Tiny Verse, Major)
     document.getElementById("tinyVerse-screen").classList.add("hidden");
     document.getElementById("major-screen").classList.add("hidden");
 
@@ -38,5 +38,5 @@ function goBack() {
     document.getElementById("major-screen").classList.add("hidden");
 
     // Показываем экран выбора раздела
-    document.getElementById("main-screen").classList.remove("hidden");
+    document.getElementById("content").classList.remove("hidden");
 }
