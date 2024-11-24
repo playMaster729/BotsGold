@@ -17,12 +17,16 @@ function openSection(sectionId) {
     // Скрываем главный экран
     document.getElementById("main-screen").classList.add("hidden");
 
+    // Скрываем экраны Фарм и Просто, если они видны
+    document.getElementById("farm-screen").classList.add("hidden");
+    document.getElementById("just-screen").classList.add("hidden");
+
     // Показываем выбранный раздел
     document.getElementById(`${sectionId}-screen`).classList.remove("hidden");
 }
 
 function openSubsection(subsectionId) {
-    // Скрываем все разделы
+    // Скрываем все подразделы
     document.getElementById("tinyVerse-screen").classList.add("hidden");
     document.getElementById("major-screen").classList.add("hidden");
 
@@ -31,10 +35,10 @@ function openSubsection(subsectionId) {
 }
 
 function goBack() {
-    // Скрываем все подразделы
+    // Скрываем все подразделы (Tiny Verse, Major)
     document.getElementById("tinyVerse-screen").classList.add("hidden");
     document.getElementById("major-screen").classList.add("hidden");
 
-    // Возвращаемся на главный экран
+    // Показываем экран выбора раздела
     document.getElementById("main-screen").classList.remove("hidden");
 }
