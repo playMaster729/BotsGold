@@ -21,10 +21,19 @@ function openSection(sectionId) {
     document.getElementById(`${sectionId}-screen`).classList.remove("hidden");
 }
 
-function goBack() {
+function openSubsection(subsectionId) {
     // Скрываем все разделы
-    document.getElementById("farm-screen").classList.add("hidden");
-    document.getElementById("just-screen").classList.add("hidden");
+    document.getElementById("tinyVerse-screen").classList.add("hidden");
+    document.getElementById("major-screen").classList.add("hidden");
+
+    // Показываем выбранный подраздел
+    document.getElementById(`${subsectionId}-screen`).classList.remove("hidden");
+}
+
+function goBack() {
+    // Скрываем все подразделы
+    document.getElementById("tinyVerse-screen").classList.add("hidden");
+    document.getElementById("major-screen").classList.add("hidden");
 
     // Возвращаемся на главный экран
     document.getElementById("main-screen").classList.remove("hidden");
