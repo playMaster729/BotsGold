@@ -29,4 +29,3 @@ function goBack() {
     // Возвращаемся на главный экран
     document.getElementById("main-screen").classList.remove("hidden");
 }
-
