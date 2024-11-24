@@ -14,10 +14,8 @@ window.onload = function () {
 };
 
 function openSection(sectionId) {
-    // Скрываем главный экран
+    // Скрываем главный экран и другие разделы
     document.getElementById("main-screen").classList.add("hidden");
-
-    // Скрываем экраны Фарм и Просто, если они видны
     document.getElementById("farm-screen").classList.add("hidden");
     document.getElementById("just-screen").classList.add("hidden");
 
@@ -26,7 +24,7 @@ function openSection(sectionId) {
 }
 
 function openSubsection(subsectionId) {
-    // Скрываем все подразделы
+    // Скрываем все подразделы (Tiny Verse, Major) и другие кнопки
     document.getElementById("tinyVerse-screen").classList.add("hidden");
     document.getElementById("major-screen").classList.add("hidden");
 
