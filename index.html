@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Экран выбора раздела -->
     <div id="main-screen" class="container">
         <h1>Выберите раздел</h1>
         <div class="button-container">
@@ -19,100 +18,56 @@
     <!-- Экран Фарм -->
     <div id="farm-screen" class="container hidden">
         <h2>Фарм</h2>
-        <button class="sub-button" onclick="openSubsection('tinyVerse')">Tiny Verse 🌌</button>
-        <button class="sub-button" onclick="openSubsection('major')">Major ⭐</button>
+        <button class="sub-button" onclick="openSubsection('farm-tinyVerse')">Tiny Verse 🌌</button>
+        <button class="sub-button" onclick="openSubsection('farm-major')">Major ⭐</button>
         <button class="back-button" onclick="goBack()">Назад</button>
     </div>
 
     <!-- Экран Просто -->
     <div id="just-screen" class="container hidden">
         <h2>Просто</h2>
-        <button class="sub-button" onclick="openSubsection('tinyVerse')">Tiny Verse 🌌</button>
-        <button class="sub-button" onclick="openSubsection('major')">Major ⭐</button>
+        <button class="sub-button" onclick="openSubsection('just-tinyVerse')">Tiny Verse 🌌</button>
+        <button class="sub-button" onclick="openSubsection('just-major')">Major ⭐</button>
         <button class="back-button" onclick="goBack()">Назад</button>
     </div>
 
-    <!-- Экран Tiny Verse -->
-    <div id="tinyVerse-screen" class="container hidden">
-        <h2>Tiny Verse 🌌</h2>
+    <!-- Экраны Tiny Verse и Major -->
+    <div id="farm-tinyVerse-screen" class="container hidden">
+        <h2>Фарм - Tiny Verse 🌌</h2>
         <ul class="button-list">
-            <li><button class="sub-button">СОБРАТЬ</button></li>
-            <li><button class="sub-button">Gawr Gura</button></li>
-            <li><button class="sub-button">Алина</button></li>
-            <li><button class="sub-button">Андрей</button></li>
-            <li><button class="sub-button">Игорь</button></li>
-            <li><button class="sub-button">Владимир</button></li>
-            <li><button class="sub-button">Михаил</button></li>
-            <li><button class="sub-button">Василий</button></li>
-            <li><button class="sub-button">Пьер</button></li>
-            <li><button class="sub-button">Dance</button></li>
-            <li><button class="sub-button">Dima Horsey</button></li>
-            <li><button class="sub-button">Hyundai Fiesta</button></li>
-            <li><button class="sub-button">Геннадий Герцог</button></li>
-            <li><button class="sub-button">AndeyBoss</button></li>
-            <li><button class="sub-button">Ray holmes</button></li>
-            <li><button class="sub-button">Husein</button></li>
-            <li><button class="sub-button">Rassul</button></li>
-            <li><button class="sub-button">Говноед</button></li>
-            <li><button class="sub-button">Artem</button></li>
-            <li><button class="sub-button">𝑪𝒍𝒐𝒖𝒅𝒚.𝒆𝒙𝒆</button></li>
-            <li><button class="sub-button">Николай</button></li>
-            <li><button class="sub-button">Макинтош Бизнес0нли</button></li>
-            <li><button class="sub-button">ωανє$</button></li>
-            <li><button class="sub-button">Jay Jonah Jameson</button></li>
-            <li><button class="sub-button">Александр Хмельницкий</button></li>
-            <li><button class="sub-button">.</button></li>
-            <li><button class="sub-button">Kevin Goodman</button></li>
-            <li><button class="sub-button">Judson Short</button></li>
-            <li><button class="sub-button">Владимир Ильин</button></li>
-            <li><button class="sub-button">Настя🐈</button></li>
-            <li><button class="sub-button">Алиса в стране чудес</button></li>
-            <li><button class="sub-button">Alyna Metix</button></li>
-            <li><button class="sub-button">Madina</button></li>
-            <li><button class="sub-button">William Scott</button></li>
-            <li><button class="sub-button">Mega Ladon</button></li>
+            <li><button class="sub-button">Кнопка 1</button></li>
+            <li><button class="sub-button">Кнопка 2</button></li>
         </ul>
         <button class="back-button" onclick="goBack()">Назад</button>
     </div>
 
-    <!-- Экран Major -->
-    <div id="major-screen" class="container hidden">
-        <h2>Major ⭐</h2>
+    <div id="farm-major-screen" class="container hidden">
+        <h2>Фарм - Major ⭐</h2>
         <ul class="button-list">
-            <li><button class="sub-button">СОБРАТЬ</button></li>
-            <li><button class="sub-button">Gawr Gura</button></li>
-            <li><button class="sub-button">Алина</button></li>
-            <li><button class="sub-button">Андрей</button></li>
-            <li><button class="sub-button">Игорь</button></li>
-            <li><button class="sub-button">Владимир</button></li>
-            <li><button class="sub-button">Михаил</button></li>
-            <li><button class="sub-button">Василий</button></li>
-            <li><button class="sub-button">Пьер</button></li>
-            <li><button class="sub-button">Dance</button></li>
-            <li><button class="sub-button">Dima Horsey</button></li>
-            <li><button class="sub-button">Hyundai Fiesta</button></li>
-            <li><button class="sub-button">Геннадий Герцог</button></li>
-            <li><button class="sub-button">AndeyBoss</button></li>
-            <li><button class="sub-button">Ray holmes</button></li>
-            <li><button class="sub-button">Husein</button></li>
-            <li><button class="sub-button">Rassul</button></li>
-            <li><button class="sub-button">Говноед</button></li>
-            <li><button class="sub-button">Artem</button></li>
-            <li><button class="sub-button">𝑪𝒍𝒐𝒖𝒅𝒚.𝒆𝒙𝒆</button></li>
-            <li><button class="sub-button">Николай</button></li>
-            <li><button class="sub-button">Макинтош Бизнес0нли</button></li>
-            <li><button class="sub-button">ωανє$</button></li>
-            <li><button class="sub-button">Jay Jonah Jameson</button></li>
-            <li><button class="sub-button">Александр Хмельницкий</button></li>
-            <li><button class="sub-button">.</button></li>
-            <li><button class="sub-button">Kevin Goodman</button></li>
-            <li><button class="sub-button">Judson Short</button></li>
-            <li><button class="sub-button">Владимир Ильин</button></li>
-            <li><button class="sub-button">Настя🐈</button></li>
-            <li><button class="sub-button">Алиса в стране чудес</button></li>
-            <li><button class="sub-button">Alyna Metix</button></li>
-            <li><button class="sub-button">Madina</button></li>
-            <li><button class="sub-button">William Scott</button></li>
-            <li><button class="sub-button">Mega Ladon</button></li>
+            <li><button class="sub-button">Кнопка 1</button></li>
+            <li><button class="sub-button">Кнопка 2</button></li>
         </ul>
-        <button class="back-button
+        <button class="back-button" onclick="goBack()">Назад</button>
+    </div>
+
+    <div id="just-tinyVerse-screen" class="container hidden">
+        <h2>Просто - Tiny Verse 🌌</h2>
+        <ul class="button-list">
+            <li><button class="sub-button">Кнопка 1</button></li>
+            <li><button class="sub-button">Кнопка 2</button></li>
+        </ul>
+        <button class="back-button" onclick="goBack()">Назад</button>
+    </div>
+
+    <div id="just-major-screen" class="container hidden">
+        <h2>Просто - Major ⭐</h2>
+        <ul class="button-list">
+            <li><button class="sub-button">Кнопка 1</button></li>
+            <li><button class="sub-button">Кнопка 2</button></li>
+        </ul>
+        <button class="back-button" onclick="goBack()">Назад</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
