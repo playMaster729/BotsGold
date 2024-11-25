@@ -7,65 +7,49 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="main-screen" class="container">
-        <h1>Выберите раздел</h1>
-        <div class="button-container">
-            <button class="main-button" onclick="openSection('farm')">Фарм</button>
-            <button class="main-button" onclick="openSection('just')">Просто</button>
+    <div id="content" class="hidden">
+        <!-- Экран выбора раздела -->
+        <div id="main-screen" class="container">
+            <h1>Выберите раздел</h1>
+            <div class="button-container">
+                <button class="main-button" onclick="openSection('farm')">Фарм</button>
+                <button class="main-button" onclick="openSection('just')">Просто</button>
+            </div>
         </div>
-    </div>
 
-    <!-- Экран Фарм -->
-    <div id="farm-screen" class="container hidden">
-        <h2>Фарм</h2>
-        <button class="sub-button" onclick="openSubsection('farm-tinyVerse')">Tiny Verse 🌌</button>
-        <button class="sub-button" onclick="openSubsection('farm-major')">Major ⭐</button>
-        <button class="back-button" onclick="goBack()">Назад</button>
-    </div>
+        <!-- Экран Фарм -->
+        <div id="farm-screen" class="container hidden">
+            <h2>Фарм</h2>
+            <button class="sub-button" onclick="openSubsection('tinyVerse-farm')">Tiny Verse 🌌</button>
+            <button class="sub-button" onclick="openSubsection('major-farm')">Major ⭐</button>
+            <button class="back-button" onclick="goBack()">Назад</button>
+        </div>
 
-    <!-- Экран Просто -->
-    <div id="just-screen" class="container hidden">
-        <h2>Просто</h2>
-        <button class="sub-button" onclick="openSubsection('just-tinyVerse')">Tiny Verse 🌌</button>
-        <button class="sub-button" onclick="openSubsection('just-major')">Major ⭐</button>
-        <button class="back-button" onclick="goBack()">Назад</button>
-    </div>
+        <!-- Экран Просто -->
+        <div id="just-screen" class="container hidden">
+            <h2>Просто</h2>
+            <button class="sub-button" onclick="openSubsection('tinyVerse-just')">Tiny Verse 🌌</button>
+            <button class="sub-button" onclick="openSubsection('major-just')">Major ⭐</button>
+            <button class="back-button" onclick="goBack()">Назад</button>
+        </div>
 
-    <!-- Экраны Tiny Verse и Major -->
-    <div id="farm-tinyVerse-screen" class="container hidden">
-        <h2>Фарм - Tiny Verse 🌌</h2>
-        <ul class="button-list">
-            <li><button class="sub-button">Кнопка 1</button></li>
-            <li><button class="sub-button">Кнопка 2</button></li>
-        </ul>
-        <button class="back-button" onclick="goBack()">Назад</button>
-    </div>
-
-    <div id="farm-major-screen" class="container hidden">
-        <h2>Фарм - Major ⭐</h2>
-        <ul class="button-list">
-            <li><button class="sub-button">Кнопка 1</button></li>
-            <li><button class="sub-button">Кнопка 2</button></li>
-        </ul>
-        <button class="back-button" onclick="goBack()">Назад</button>
-    </div>
-
-    <div id="just-tinyVerse-screen" class="container hidden">
-        <h2>Просто - Tiny Verse 🌌</h2>
-        <ul class="button-list">
-            <li><button class="sub-button">Кнопка 1</button></li>
-            <li><button class="sub-button">Кнопка 2</button></li>
-        </ul>
-        <button class="back-button" onclick="goBack()">Назад</button>
-    </div>
-
-    <div id="just-major-screen" class="container hidden">
-        <h2>Просто - Major ⭐</h2>
-        <ul class="button-list">
-            <li><button class="sub-button">Кнопка 1</button></li>
-            <li><button class="sub-button">Кнопка 2</button></li>
-        </ul>
-        <button class="back-button" onclick="goBack()">Назад</button>
+        <!-- Tiny Verse и Major экраны -->
+        <div id="tinyVerse-farm-screen" class="container hidden">
+            <h2>Tiny Verse 🌌 (Фарм)</h2>
+            <button class="back-button" onclick="goBack()">Назад</button>
+        </div>
+        <div id="major-farm-screen" class="container hidden">
+            <h2>Major ⭐ (Фарм)</h2>
+            <button class="back-button" onclick="goBack()">Назад</button>
+        </div>
+        <div id="tinyVerse-just-screen" class="container hidden">
+            <h2>Tiny Verse 🌌 (Просто)</h2>
+            <button class="back-button" onclick="goBack()">Назад</button>
+        </div>
+        <div id="major-just-screen" class="container hidden">
+            <h2>Major ⭐ (Просто)</h2>
+            <button class="back-button" onclick="goBack()">Назад</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
