@@ -1,5 +1,6 @@
 const SECRET_CODE = "BotsFarmCode=148878";
 let screenHistory = []; // Стек для отслеживания экранов
+let currentSection = ''; // Текущий раздел (Фарм или Просто)
 
 window.onload = function () {
     const hash = window.location.hash.substring(1); // Убираем символ #
@@ -17,6 +18,12 @@ window.onload = function () {
 };
 
 function openSection(sectionId) {
+    // Если мы переходим в новый раздел, очищаем историю экранов
+    if (currentSection !== sectionId) {
+        screenHistory = []; // Очищаем историю при смене раздела
+        currentSection = sectionId; // Обновляем текущий раздел
+    }
+
     updateHistory(sectionId + "-screen"); // Добавляем текущий экран в историю
     hideAllScreens();
     document.getElementById(`${sectionId}-screen`).classList.remove("hidden");
