@@ -58,3 +58,49 @@ function hideAllScreens() {
     const screens = document.querySelectorAll(".container");
     screens.forEach(screen => screen.classList.add("hidden"));
 }
+
+// Массивы с текстами и ссылками
+const tinyVerseLinks = [
+    { text: "◡̈⃝", url: "https://example1.com" },
+    { text: "Gawr Gura", url: "https://example2.com" },
+    { text: "Алина", url: "https://example3.com" },
+    { text: "Андрей", url: "https://example4.com" },
+    { text: "Игорь", url: "https://example5.com" },
+    { text: "Владимир", url: "https://example6.com" },
+    { text: "Михаил", url: "https://example7.com" },
+    // Добавьте остальные элементы...
+];
+
+const majorLinks = [
+    { text: "◡̈⃝", url: "https://example1.com" },
+    { text: "Gawr Gura", url: "https://example2.com" },
+    { text: "Алина", url: "https://example3.com" },
+    { text: "Андрей", url: "https://example4.com" },
+    { text: "Игорь", url: "https://example5.com" },
+    { text: "Владимир", url: "https://example6.com" },
+    { text: "Михаил", url: "https://example7.com" },
+    // Добавьте остальные элементы...
+];
+
+// Индексы для отслеживания текущего состояния кнопок
+let tinyVerseIndex = 0;
+let majorIndex = 0;
+
+// Функция для изменения текста и перехода по ссылке
+function changeLink(buttonId, section) {
+    let button = document.getElementById(buttonId);
+    let newLink, newText;
+
+    if (section === "tinyVerse") {
+        newLink = tinyVerseLinks[tinyVerseIndex].url;
+        newText = tinyVerseLinks[tinyVerseIndex].text;
+        tinyVerseIndex = (tinyVerseIndex + 1) % tinyVerseLinks.length; // Обновляем индекс
+    } else if (section === "major") {
+        newLink = majorLinks[majorIndex].url;
+        newText = majorLinks[majorIndex].text;
+        majorIndex = (majorIndex + 1) % majorLinks.length; // Обновляем индекс
+    }
+
+    button.innerText = newText; // Меняем текст кнопки
+    window.open(newLink, "_blank"); // Открываем ссылку в новой вкладке
+}
