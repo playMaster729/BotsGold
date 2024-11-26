@@ -92,15 +92,24 @@ function changeLink(buttonId, section) {
     let newLink, newText;
 
     if (section === "tinyVerse") {
+        // Устанавливаем новый текст и ссылку
         newLink = tinyVerseLinks[tinyVerseIndex].url;
         newText = tinyVerseLinks[tinyVerseIndex].text;
-        tinyVerseIndex = (tinyVerseIndex + 1) % tinyVerseLinks.length; // Обновляем индекс
+
+        // Обновляем индекс на следующий элемент
+        tinyVerseIndex = (tinyVerseIndex + 1) % tinyVerseLinks.length;
     } else if (section === "major") {
+        // Устанавливаем новый текст и ссылку
         newLink = majorLinks[majorIndex].url;
         newText = majorLinks[majorIndex].text;
-        majorIndex = (majorIndex + 1) % majorLinks.length; // Обновляем индекс
+
+        // Обновляем индекс на следующий элемент
+        majorIndex = (majorIndex + 1) % majorLinks.length;
     }
 
-    button.innerText = newText; // Меняем текст кнопки
-    window.open(newLink, "_blank"); // Открываем ссылку в новой вкладке
+    // Сразу меняем текст кнопки
+    button.innerText = newText;
+
+    // Открываем ссылку в новой вкладке
+    window.open(newLink, "_blank");
 }
